@@ -1,0 +1,7 @@
+@Test
+public void uiTest() {
+    driver.get("https://your-shopify-store.myshopify.com/");
+    Assert.assertTrue(driver.findElement(By.id("search-bar")).isDisplayed(), "Search bar not visible!");
+    Assert.assertTrue(driver.findElement(By.id("site-nav")).isDisplayed(), "Navigation menu not visible!");
+    Assert.assertTrue(driver.findElement(By.id("footer")).isDisplayed(), "Footer not visible!");
+}
