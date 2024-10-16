@@ -13,11 +13,11 @@ This project is an automation testing suite for a Shopify e-commerce website, bu
 
 1. Clone the Repository
    - Clone this project to your local machine using:
-     git clone https://github.com/your-username/shopify-automation-testing.git
+     git clone https://github.com/Sowmiya2189/Heliverse-script.git
      
    - Navigate to the project directory:
    
-     cd shopify-automation-testing
+     cd Heliverse-script
      
 
 2. Import the Project into Your IDE
