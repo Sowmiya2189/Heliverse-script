@@ -4,7 +4,7 @@ This project is an automation testing suite for a Shopify e-commerce website, bu
 
 ## Prerequisites
 
-- Java Development Kit (JDK)- Make sure you have JDK 8 or later installed.
+- Java Development Kit JDK 8 
 - Maven- To manage project dependencies.
 - IDE - An integrated development environment like IntelliJ IDEA or Eclipse.
 - Browser - Google Chrome 
