@@ -1,0 +1,18 @@
+@Test
+public void loginTest() {
+    driver.get("https://your-shopify-store.myshopify.com/account/login");
+
+    // Test with valid credentials
+    driver.findElement(By.id("CustomerEmail")).sendKeys("validEmail@example.com");
+    driver.findElement(By.id("CustomerPassword")).sendKeys("validPassword");
+    driver.findElement(By.name("login")).click();
+    Assert.assertTrue(driver.getPageSource().contains("Welcome back"), "Login failed with valid credentials!");
+
+    // Test with invalid credentials
+    driver.findElement(By.id("CustomerEmail")).clear();
+    driver.findElement(By.id("CustomerEmail")).sendKeys("invalidEmail@example.com");
+    driver.findElement(By.id("CustomerPassword")).clear();
+    driver.findElement(By.id("CustomerPassword")).sendKeys("invalidPassword");
+    driver.findElement(By.name("login")).click();
+    Assert.assertTrue(driver.getPageSource().contains("Invalid login credentials"), "Error message not displayed correctly!");
+}
