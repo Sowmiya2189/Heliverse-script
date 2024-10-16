@@ -1,0 +1,12 @@
+@Test
+public void formValidationTest() {
+    driver.get("https://your-shopify-store.myshopify.com/contact");
+    driver.findElement(By.id("ContactFormName")).sendKeys("");
+    driver.findElement(By.id("ContactFormSubmit")).click();
+
+    Assert.assertTrue(driver.getPageSource().contains("Name is required"), "Error message not displayed for missing name!");
+
+    driver.findElement(By.id("ContactFormEmail")).sendKeys("invalid-email");
+    driver.findElement(By.id("ContactFormSubmit")).click();
+    Assert.assertTrue(driver.getPageSource().contains("Enter a valid email"), "Error message not displayed for invalid email!");
+}
