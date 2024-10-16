@@ -1,0 +1,6 @@
+try {
+    // Test code here
+} catch (Exception e) {
+    File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+    FileUtils.copyFile(screenshot, new File("path/to/screenshot.png"));
+}
